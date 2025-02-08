@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Graph</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            ;
+        }
+        h1 {
+            color: #333;
+        }
+        canvas {
+            margin-top: 20px;}
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        header {
+            background-color: #945d85;
+            color: white;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            font-style: italic;
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+        }
+
+    </style>
+</head>
+<body> 
+    <header>
+        <h1>AccuWeather</h1>
+    </header>
+
+<div class="container1">
+    <h1>Room and Battery Temperature</h1>
+    <p id="roomtemp">Loading room temperature...</p>
+    <p id="batterytemp">Loading battery temperature...</p>
+    
+</div>
+<div class="container">
+    <h1>Room vs Battery Temperature Graph</h1>
+    <button id="refresh-button">Refresh Data</button>
+    <canvas id="temperatureChart" width="400" height="200"></canvas>
+</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
